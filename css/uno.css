@@ -925,8 +925,7 @@ html {
 
 body {
   /*font-family: "Raleway", sans-serif;*/
-  font-family: Times, TimesNR, 'New Century Schoolbook', Georgia, 'New York', serif;
-  transform: uppercase;
+  font-family:  "Raleway",Verdana,sans-serif,宋体, serif, "Droid Serif", Helvetica Neue, Helvetica, Arial;
   font-size: 1em;
   color: #666666; }
 
@@ -955,9 +954,8 @@ h5 {
   margin-top: .8em;
   margin-bottom: .4em;
   /*font-family: "Roboto Slab", serif;*/
-  font-family: Times, TimesNR, 'New Century Schoolbook', Georgia, 'New York', serif;
+  font-family: "Raleway",Verdana,sans-serif,宋体, serif, "Droid Serif", Helvetica Neue, Helvetica, Arial;
   font-weight: lighter;
-	letter-spacing: 2px;
   color: #333333;
   -webkit-font-smoothing: antialiased; }
 
@@ -999,7 +997,7 @@ blockquote {
   border: 1px solid #eeeeee;
   border-radius: 3px;
   /*font-family: "Roboto Slab", serif;*/
-  font-family: Times, TimesNR, 'New Century Schoolbook', Georgia, 'New York', serif;
+  font-family:  "Raleway",Verdana,sans-serif,宋体, serif, "Droid Serif", Helvetica Neue, Helvetica, Arial;
   font-weight: lighter;
   font-style: italic;
   font-size: 1.0em;
@@ -1052,7 +1050,8 @@ code {
 .excerpt {
   margin: 0;
   font-size: .9em;
-  color: #999999; }
+	font-family: "Noto Serif", serif;
+  color: #666; }
 
 .intro {
   font-family: "Roboto Slab", serif;
@@ -1137,7 +1136,8 @@ hr {
 
 .post-meta {
   margin: 0 0 1.4em 0;
-  color: #c7c7c7; }
+	font-family: Times, TimesNR, 'New Century Schoolbook', Georgia, 'New York', serif;
+  color: #000; }
 
 .post-meta__date {
   margin-right: .5em; }
@@ -1229,7 +1229,7 @@ hr {
   border-top: 1px solid rgba(255, 255, 255, 0.14); }
 
 .panel-cover__divider--secondary {
-  width: 15%; }
+  width: 35%; }
 
 .panel-main {
   display: table;
@@ -1305,8 +1305,9 @@ hr {
   text-shadow: none;
   color: #006699;
   -webkit-font-smoothing: antialiased; }
-  .btn:hover, .navigation__item a:hover {
-    color: #006699;
+  /* .btn:hover, */.navigation__item a:hover {
+    color: #000 !important;
+		background-color: #fff;
     border-color: #006699; }
 
 .btn-secondary {
@@ -1387,20 +1388,73 @@ nav {
       display: block;
       font-size: 1.7em; }
 
-.pagination {
+/* .pagination {
   display: block;
-  margin: 0 0 4em 0; }
+  margin: 0 0 4em 0; } */
+	
+	
+.pagination {
+  width: 100%;
+	font-family:"Roboto", sans-serif ;
+	height: 60px;
+	border-top: 1px #dedede solid;
+	border-bottom: 1px #dedede solid;
+/* 	border: #000000 1px solid; */
+	box-sizing: border-box;
+	}
+
 
 .pagination__page-number {
   margin: 0;
   font-size: .8em;
   color: #999999; }
 
-.pagination__newer {
-  margin-right: 1em; }
+.pagination__newer{
+	box-sizing: border-box;
+	display: block;
+  float: left;
+	color: #000000;
+  height: 100%;
+	font-size: 15px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	text-align: ceter;
+	line-height: 50px;
+	border: none;
+	border-radius: 0;
+	padding-left: 20%;
+  width: 50%; }
+	
+	.pagination__newer:hover {
+		background-color: #000; 
+		color: #fff;
+		}
 
-.pagination__older {
-  margin-left: 1em; }
+/* .pagination__older {
+  margin-left: 1em; } */
+.pagination__older{
+	margin-left: 50%;
+	box-sizing: border-box;
+	display: block;
+	float: left;
+	color: #000000;
+	height: 100%;
+	font-size: 15px;
+	font-weight: 400;
+	font-family: "Roboto", sans-serif;
+	text-align: ceter;
+	line-height: 50px;
+	border: none;
+	border-radius: 0;
+	padding-left: 20%;
+	width: 50%; 
+}
+	.pagination__older:hover {
+		background-color: #000; 
+		color: #fff;
+		}
+
+
 
 i {
   font-family: 'entypo';
@@ -1414,44 +1468,51 @@ i {
   display: block;
   position: relative; }
 
+.main-post-list{
+	box-sizing: border-box;
+}
+
 .post-list {
   margin: 0;
-  padding: 0;
+  padding: 0 60px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
   list-style-type: none;
   text-align: left; }
-  .post-list li {
-    margin: 0 0 2.2em 0; }
-    .post-list li:last-child hr {
+.post-list li {
+    margin: 0 0 1em 0; }
+.post-list li:last-child hr {
       display: none; }
 
 .post-list__post-title {
-  margin-top: 0;
-  margin-bottom: .2em;
-  font-size: 1.8em;
+  margin-top: 0.5em;
+  font-size: 1.8em !important;
   -webkit-font-smoothing: antialiased;
   font-weight: bold;
-  line-height: 1.3em; }
+	font-family: Times, TimesNR, 'New Century Schoolbook', Georgia, 'New York', serif;
+  line-height: 1em; }
   .post-list__post-title a {
-    color: #333333; }
-    .post-list__post-title a:hover {
-      color: #006699; }
+    color: #000; }
+    .post-list__post-title a:hover { 
+			text-decoration: underline;}
 
 .post-list__meta {
   display: block;
-  margin: .7em 0 0 0;
+  margin: .1em 0 .7em 0;
   font-size: .9em;
-  color: #c7c7c7; }
+  color: #000; }
 
 .post-list__meta--date {
   margin-right: .5em;
-  color: #c7c7c7; }
+	font-family: Times, TimesNR, 'New Century Schoolbook', Georgia, 'New York', serif;
+  color: #000; }
 
 .post-list__meta--tags {
   margin-left: .5em; }
 
 .post-list__divider {
-  width: 30%;
-  margin: 2.2em 0 2.1em 0;
+  width: 100%;
+  margin: 1.1em 0 0 0;
   border-top: 1px solid #dddddd; }
 
 *:focus {
@@ -1647,6 +1708,10 @@ input[type="tel"] {
         display: inline-block;
         width: 25.8%; }
 
+.post-list{
+	padding: 0 ;
+}
+
   .content-wrapper {
     width: 80%;
     max-width: none;
@@ -1706,4 +1771,50 @@ pre {
 }
 .post-img img{
 	width: 100%;
+	margin-bottom: 1em;
+}
+
+.widget-title{
+	font-family: "Roboto", sans-serif;
+	color: #333;
+	font-size: 1.1rem;
+	font-weight: 700;
+	margin-top: 0.9375rem;
+	margin-bottom: 1.40625rem;
+	letter-spacing: 0.1em;
+}
+
+.categories{
+	height: auto;
+	width: auto;
+	padding: 30px 45px 30px 0;
+}
+
+.categories a{
+	font-family: "Roboto", sans-serif;
+	text-decoration: none;
+	color: #555;
+	font-size: 1rem;
+	text-transform: none;
+	letter-spacing: 0.1em;
+}
+
+.categories a:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.categorieslist-item{
+	display: block;
+	line-height: 150%;
+}
+.categories-link{
+	font-size: .5em !important;
+}
+.categories-link:hover {
+	color: #000000 !important;
+}
+.tags-link:hover{
+	text-decoration: underline ;
+	color: #000000 !important;
 }
