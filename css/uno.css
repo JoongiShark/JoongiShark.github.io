@@ -1164,8 +1164,8 @@ hr {
 
 .post hr {
   display: block;
-  width: 30%;
-  margin: 2em 0;
+  width: 100%;
+  margin-bottom: 2em;
   border-top: 1px solid #dddddd; }
 
 .panel {
@@ -1341,7 +1341,7 @@ hr {
   left: 0;
   width: 100%;
   height: 42px;
-  background: rgba(13, 71, 77, 0.98);
+  background: rgba(0, 0, 0, 0.80);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center; }
 
@@ -1484,10 +1484,11 @@ i {
 .post-list li:last-child hr {
       display: none; }
 
-.post-list__post-title {
+.post-list__post-title, .post-title{
   margin-top: 0.5em;
-  font-size: 1.8em !important;
+ font-size: 1.8em !important;
   -webkit-font-smoothing: antialiased;
+	text-transform: uppercase;
   font-weight: bold;
 	font-family: Times, TimesNR, 'New Century Schoolbook', Georgia, 'New York', serif;
   line-height: 1em; }
@@ -1495,6 +1496,7 @@ i {
     color: #000; }
     .post-list__post-title a:hover { 
 			text-decoration: underline;}
+
 
 .post-list__meta {
   display: block;
@@ -1636,7 +1638,7 @@ input[type="tel"] {
   .panel-main {
     display: table;
     position: relative; 
-		height: 300px;
+		height: 100%;
 		}
 
   .panel-cover--collapsed {
@@ -1645,7 +1647,7 @@ input[type="tel"] {
 
   .panel-main__inner {
     display: block;
-    padding: 200px 10% 0px 10%}
+    padding: 50% 10% 0px 10%}
 
   .panel-cover__description {
     display: block;
@@ -1720,13 +1722,24 @@ input[type="tel"] {
   .content-wrapper__inner {
     margin-right: 0;
     margin-left: 0; }
+		
+	.pagination__older{
+		font-size: 10px;
+		line-height: 50px;
+		padding-left: 10%;}
+	
+	.pagination__newer{
+		font-size: 10px;
+		line-height: 50px;
+		padding-left: 10%;}
+	
 
   .navigation__item {
     width: 100%;
     margin: 0 0 .4em 0; } }
 @media all and (max-width: 340px) {
   .panel-main__inner {
-    padding: 0 5%; }
+    padding: 50% 5%; }
 
   .panel-title {
     margin-bottom: .1em;
@@ -1787,7 +1800,7 @@ pre {
 .categories{
 	height: auto;
 	width: auto;
-	padding: 30px 45px 30px 0;
+	padding: 30px 10px 30px 0;
 }
 
 .categories a{
@@ -1817,4 +1830,15 @@ pre {
 .tags-link:hover{
 	text-decoration: underline ;
 	color: #000000 !important;
+}
+
+.re-btn{
+	border: none;
+	background-color: #fff;
+	display: block;
+	margin: 12.5px 0;
+}
+.re-btn:hover{
+	text-decoration: underline;
+	cursor: pointer;
 }
